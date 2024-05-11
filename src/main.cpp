@@ -1,15 +1,23 @@
+#include <Arduino.h>
+
 #if defined(ESP8266)
 #include <ESP8266WiFi.h>
 #define THINGSBOARD_ENABLE_PROGMEM 0
 #elif defined(ESP32)
 #include <WiFi.h>
+#include "Update.h"
 #endif
 
 #include <Arduino_MQTT_Client.h>
 #include <ThingsBoard.h>
 #include <secret.h>
 
+#ifndef LED_BUILTIN
+#define LED_BUILTIN 99
+#endif
+
 // Thingsboard we want to establish a connection too
+//constexpr char THINGSBOARD_SERVER[] = "thingsboard.ucll.cloud";
 constexpr char THINGSBOARD_SERVER[] = "demo.thingsboard.io";
 // MQTT port used to communicate with the server, 1883 is the default unencrypted MQTT port.
 constexpr uint16_t THINGSBOARD_PORT = 1883U;
