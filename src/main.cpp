@@ -17,10 +17,10 @@
 #endif
 
 // Thingsboard we want to establish a connection too
-//constexpr char THINGSBOARD_SERVER[] = "thingsboard.ucll.cloud";
-constexpr char THINGSBOARD_SERVER[] = "demo.thingsboard.io";
-// MQTT port used to communicate with the server, 1883 is the default unencrypted MQTT port.
-constexpr uint16_t THINGSBOARD_PORT = 1883U;
+constexpr char THINGSBOARD_SERVER[] = "thingsboard.ucll.cloud";
+constexpr uint32_t THINGSBOARD_PORT = 31364U;
+//constexpr char THINGSBOARD_SERVER[] = "demo.thingsboard.io";
+//constexpr uint16_t THINGSBOARD_PORT = 1883U;
 
 // Maximum size packets will ever be sent or received by the underlying MQTT client,
 // if the size is to small messages might not be sent or received messages will be discarded
